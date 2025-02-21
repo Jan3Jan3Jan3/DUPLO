@@ -1,0 +1,24 @@
+body {
+  background-color: white;
+  width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.content-wrapper {
+  width: 850px;
+  margin: 0 auto; 
+  background-color: lightblue;
+  padding: 20px;
+}
+p {text-align: center;}
+h1 {text-align: center; font-size: 2em;}
+h2,
+h3,
+h4,
+h5,
+h6 {text-align: center; font-size: 1em;}
+.horizontal-flex-container {
+  display: flex;
+  justify-content: center;
+}
+form{text-align: center;}
