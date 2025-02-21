@@ -1,0 +1,133 @@
+details {
+  user-select: none;
+  color: white;
+  font-size : 50pt;
+  background: #253887;
+}
+header {
+  display: flex;
+  color: #253887;
+  align-items: center;  /* vertically centers the text */
+  font-size: 44px;
+  font-family: 'Arial';
+  font-weight:  bold;
+  height: 10h;  /* or any height you want to center it within */
+}
+details>summary span.icon {
+  font-size: 90pt;
+  width: 90px;
+  height: 90px;
+  transition: all 0.3s;
+  line-height: 0;
+  transform: translateY(-30px);
+}
+details > p {
+  color: #253887;
+  background-color: #00AAAD;
+  font-size: 40pt;
+  font : 'poppins';
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+details[open] summary span.icon {
+  transform: rotateX(180deg) scaleX(-1) translateX(-80px) translateY(60px);
+}
+summary {
+  display: flex;
+  cursor: pointer;
+  display: flex; align-items: center;
+}
+summary::-webkit-details-marker {
+  display: none;
+  color: blue;
+}
+br {
+  display: block;
+  margin: 5px 0;
+  line-height:5px;
+}
+.form-one
+{
+  height: 89.19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-three
+{
+  height: 89.19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-one input[type=text] {
+  width: 105pt;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 30pt;
+  border: 2px solid white;
+  background-color: #253887;
+  border-radius: 4px;
+  color: white;
+}
+
+.form-three input[type=text] {
+  width: 105pt;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 30pt;
+  border: 2px solid white;
+  background-color: #231b62;
+  border-radius: 4px;
+  color: white;
+}
+
+
+.form-two
+{
+  margin-left: 8px; 
+  display: inline;
+}
+
+.form-two input[type=text] {
+  width: 125pt;
+  font-size: 25pt;
+  border: 2px solid white;
+  background-color: #a6caec;
+  border-radius: 4px;
+  color: white;
+}
+
+.btn-group button {
+  display: flex; 
+  align-items: center;
+  background-color: #a6caec; /* Green background */
+  border: 1px solid white; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  font-size: 25pt;
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  height : 70px;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #231b62;
+}
