@@ -1,0 +1,239 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Form styling with 2x2 grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+    .form-grid .form-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-grid label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-grid input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.submit-button {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    background-color: #258cfb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Containers styling */
+.containers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Configurable container widths using CSS variables */
+:root {
+    --container1-width: 25%;
+    --container2-width: 25%;
+    --container3-width: 25%;
+    --container4-width: 25%;
+}
+
+#container1 {
+    width: var(--container1-width);
+    margin-right: 10px;
+}
+
+#container2 {
+    width: var(--container2-width);
+    margin-right: 10px;
+}
+
+#container3 {
+    width: var(--container3-width);
+    margin-right: 10px;
+}
+
+#container4 {
+    width: var(--container4-width);
+    margin-right: 0;
+}
+
+/* Common container styles */
+.containers-wrapper > div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.containers-wrapper button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    min-height: 40px; /* Ensures consistent height regardless of content */
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Make all buttons blue except in container4 */
+#container1 button, #container2 button, #container3 button {
+    background-color: #258cfb;
+    color: white;
+}
+
+/* Keep container4 buttons as they are */
+#container4 button {
+    /* Default button styling */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.containers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 0; /* Remove any gap between containers */
+}
+
+.containers-wrapper > div {
+    margin-right: 0 !important; /* Override the margin from your CSS */
+    border-radius: 0; /* Remove border radius for seamless appearance */
+}
+
+/* Custom container widths - adjust as needed */
+:root {
+    --container1-width: 30%;
+    --container2-width: 20%;
+    --container3-width: 25%;
+    --container4-width: 25%;
+}
+
+/* Column headers styling */
+.column-headers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 0;
+}
+
+.column-header {
+    font-weight: bold;
+    padding: 8px 10px;
+    background-color: #e6e6e6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+#header1 {
+    width: var(--container1-width);
+}
+
+#header2 {
+    width: var(--container2-width);
+}
+
+#header3 {
+    width: var(--container3-width);
+}
+
+#header4 {
+    width: var(--container4-width);
+}
+
+h1 {
+    margin-bottom: 20px;
+}

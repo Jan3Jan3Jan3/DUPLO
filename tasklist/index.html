@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Takenlijst</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Takenlijst</h1>
+    
+    <form id="frm1" action="/action_page.php">
+        <!-- 2x2 grid for form inputs using the form-grid class from your CSS -->
+        <div class="form-grid">
+            <div class="form-item">
+                <label for="task">Taak:</label>
+                <input type="text" id="task" name="fname">
+            </div>
+            
+            <div class="form-item">
+                <label for="description">Beschrijving:</label>
+                <input type="text" id="description" name="lname">
+            </div>
+            
+            <div class="form-item">
+                <label for="label">Label:</label>
+                <input type="text" id="label" name="lname">
+            </div>
+            
+            <div class="form-item">
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="birthday">
+            </div>
+        </div>
+        
+        <!-- Submit button using the submit-button class from your CSS -->
+        <input type="button" onclick="submitTask()" value="Aanmaken" class="submit-button">
+        
+        <!-- Column headers -->
+        <div class="column-headers">
+            <div id="header1" class="column-header">Taak</div>
+            <div id="header2" class="column-header">Label</div>
+            <div id="header3" class="column-header">Datum</div>
+            <div id="header4" class="column-header">Afgerond</div>
+        </div>
+        
+        <!-- Containers with no space between them -->
+        <div class="containers-wrapper">
+            <div id="container1"></div>
+            <div id="container2"></div>
+            <div id="container3"></div>
+            <div id="container4"></div>
+        </div>
+    </form>
+    <script src="site.js"></script>
+</body>
+</html>
